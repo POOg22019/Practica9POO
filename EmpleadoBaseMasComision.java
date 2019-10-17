@@ -11,12 +11,12 @@ public class EmpleadoBaseMasComision extends EmpleadoPorComision {
         return salarioBase;
     }
     
-    public double Ingresos(){
+    public double ingresos(){
         return getSalarioBase() + super.ingresos(); 
     }
     
-    public void toString(){
-        System.out.print(" Empleado Base mas comision\n" + " Nombre: " + super.getNombre() + "\nApellido:" + super.getApellido() + "\nNumero de seguridad social: " + super.getSeguro() + "\nVentas Totales: " + super.getVentasTotales() + "\nTasa de comision: " + super.getTasaComision() + "\nSalario base: " + this.getSalarioBase() + "\nIngresos: " + this.Ingresos());
+    public String toString(){
+        return " Nombre: " +super.getName()+ " Apellido: " +super.obtenerApellido()+ " Numero de seguridad social: " +super.obtenerSeguro()+ " Ventas Totales: " +super.getVentasTotales()+ " Tasa de comision: " +super.getTasaComision()+ " Salario base: " +this.getSalarioBase()+ " Ingresos: " +this.ingresos();
     }
     
 }
