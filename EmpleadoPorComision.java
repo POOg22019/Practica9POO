@@ -14,6 +14,14 @@ public class EmpleadoPorComision extends Empleado{
         this.tasaComision = tasaComision;
     }
     
+    public void setVentasTotales( double vT ){
+        ventasTotales = vT;
+    }
+    
+    public void setTasaComision( double tC){
+        tasaComision = tC;
+    }
+   
     public String getName(){
         return nombre;
     }
