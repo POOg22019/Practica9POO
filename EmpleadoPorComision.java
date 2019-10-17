@@ -1,11 +1,29 @@
 public class EmpleadoPorComision extends Empleado{
+    
+    private String nombre;
+    private String apellido;
+    private String seguro;
     private double ventasTotales;
     private double tasaComision;
     
     public EmpleadoPorComision( String nombre, String apellido, String seguro, double ventasTotales, double tasaComision ){
-        super( nombre, apellido, seguro );
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.apellido = seguro;
         this.ventasTotales = ventasTotales;
         this.tasaComision = tasaComision;
+    }
+    
+    public String getName(){
+        return nombre;
+    }
+    
+    public String obtenerApellido(){
+        return apellido;
+    }
+    
+    public String obtenerSeguro(){
+        return seguro;
     }
    
     public double getVentasTotales(){
@@ -17,11 +35,11 @@ public class EmpleadoPorComision extends Empleado{
     }
     
     public double ingresos(){
-        return tasaComision * ventasTotales;
+        return getTasaComision() * getVentasTotales();
     }
     
-     public void toString(){
-        System.out.print(" Empleado por comision\n" + " Nombre: " + super.getNombre() + "\nApellido:" + super.getApellido() + "\nNumero de seguridad social: " + super.getSeguro() + "\nVentas Totales: " + this.getVentasTotales() + "\nTasa de comision: " + this.getTasaComision() + "\nIngresos: " + this.ingresos());
+     public String toString(){
+        return " Nombre: " +getName()+ " Apellido: " +obtenerApellido()+ " Numero de seguridad social: " +obtenerSeguro()+ " Ventas Totales: "+getVentasTotales()+ " Tasa de comision: " +getTasaComision()+ " Ingresos: " +ingresos();
     }
     
 }
