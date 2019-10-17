@@ -7,6 +7,10 @@ public class EmpleadoBaseMasComision extends EmpleadoPorComision {
         this.salarioBase = salarioBase;
     }
     
+    public void setSalarioBase( double sB ){
+        salarioBase = sB;
+    }
+    
     public double getSalarioBase(){
         return salarioBase;
     }
